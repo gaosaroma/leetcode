@@ -5,12 +5,16 @@ Welcome to pp's leetcode records(python).
 ### structure
 
 - docs
-    
-archive thoughts, reviews and reference recommended.
-    
+  
+  archive thoughts, reviews and reference recommended.
+
 - scripts
-    
+  
     archive codes in python.
+    
+- java
+
+    change the language from python to JAVA
 
 
 ### Plans
