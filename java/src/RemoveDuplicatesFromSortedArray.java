@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class RemoveDuplicatesFromSortedArray {
     //    thoughts: 2 pointers
     public static int removeDuplicates(int[] nums) {
-        
+
         if (nums.length == 0) return 0;
 
         int i = 0;
