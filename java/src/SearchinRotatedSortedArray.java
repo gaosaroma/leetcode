@@ -1,10 +1,13 @@
 public class SearchinRotatedSortedArray {
     public int search(int[] nums, int target) {
-//        Approach1: 迭代
+//        Ideas: 二分法，不仅仅是用在搜索，在有规律的数组里面都可以用；
+//        双指针真的很好用！！！不管是N Sum 还是 Search 还是什么！！！
+
+//        Approach1: 迭代，二分法
 //        return rotatedSearch(nums, 0, nums.length - 1, target);
 
-//        Approach1:不用迭代
-//        不用迭代，双指针也可以有迭代，二分法的效果
+//        Approach2:不用迭代
+//        不用迭代，双指针实现迭代，二分法的效果
 //        要注意的地方：[l,r]之间都有可能是target的东西，所以[mid+1,r];[l,mid-1]，注意l>r判断
         int l = 0, r = nums.length - 1;
         while (l <= r) {
