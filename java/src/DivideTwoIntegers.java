@@ -3,7 +3,7 @@ public class DivideTwoIntegers {
     // 在任何顺序排列的数组中，搜寻一个数字，都可以用二分法查找。
     // 1. 確定查找判断的边界（mid * divisor与dividend进行比较）
     // 2. 确定边界（正负和LONG）-》 注意mid计算时：(left+right)/2改成left+(right-left)/2
-    // 3. 其它细节[bitMulti, INT_MIN与INT_MAX, 当界限并不精确时，从left与right临界的情况（1,2）进行推导]
+    // 3. 其它细节[bitMulti, INT_MIN与INT_MAX
     public int divide(int dividend, int divisor) {
         if (dividend == Integer.MIN_VALUE && divisor == -1) return Integer.MAX_VALUE;
         if (divisor == -1) return -dividend;
@@ -19,12 +19,24 @@ public class DivideTwoIntegers {
             long res = bitMulti(mid, absDivs);
 
             if (res > absDivd) {
-                right = mid; // 这里的考虑： 当mid无法精准判断边界；强制让left为ans，那么right就不应该方位候选池，即：[l,r)，所以不是mid-1
+                right = mid;
             } else {
                 left = mid + 1;
             }
         }
 
+        // 控制为 [l,r]
+        // while(left <= right)
+        // if(==) return mid;
+        // if(>) right = mid-1;
+        // if(<) left = mid+1;
+        // return right;
+
+        // 或者控制为[l,r)
+        // while(left < right)
+        // if(>) right = mid;
+        // if(<) left = mid+1;
+        // return right;
         ans = sign * (left - 1);
         return (int) ans;
     }
