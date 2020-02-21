@@ -3,7 +3,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GenerateParentheses {
-    private Character[] parenthese = {'(', ')'};
 
     public List<String> generateParenthesis(int n) {
         if (n <= 0) return new ArrayList<>();

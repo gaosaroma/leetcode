@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LetterCombinationsofaPhoneNumber {
+    // 回溯法
+    // 经典的组合问题[M*N]个
     private String[] initMap = new String[]{"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
 
